@@ -1,0 +1,14 @@
+.form{
+    padding: 25px;
+    height: 270px;
+}
+input{
+    width: 600px;
+    cursor: pointer;
+}
+.btn{
+text-align: center;
+display: flex;
+ justify-content: center;
+ align-items: center;
+}

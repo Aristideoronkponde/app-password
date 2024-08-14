@@ -1,0 +1,31 @@
+<div class="">
+    <form class="container card form"  (submit)="onSubmit()" [formGroup]="formValid">
+        <div class="mb-3 ">
+            <label for="user" class="form-label">Utilisateur</label>
+            <input class="form-control input" type="text" placeholder="Nom de l'utilisateur" aria-label="Disabled input example"  formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="text" class="form-control" id="password" placeholder="password"  formControlName="password">
+        </div>
+        <div>
+            <button p *ngIf="formValid.status ==='VALID' " class="btn btn-primary mb-3 btn" type="submit">
+                Envoyer
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-lock-fill"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                </svg>
+            </button>
+        
+        </div>
+    
+    </form>
+    <p>{{formValid.value.name}}</p>
+    <p *ngIf="formValid.status ==='VALID' ">les champs nom et email sont requis</p>
+
+    <app-password></app-password>
+
+</div>
+
+
